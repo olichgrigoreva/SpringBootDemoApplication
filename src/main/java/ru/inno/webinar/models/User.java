@@ -19,5 +19,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
+    private String hashPassword;
+    @Transient //чтобы обычный пароль не попал в БД
+    private String password; //для хеширования пароля с формы
 }
